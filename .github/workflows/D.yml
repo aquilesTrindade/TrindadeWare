@@ -2,9 +2,33 @@ name: TrindadeWare - D
 
 on:
   push:
-    branches:
-      - main
-      - dev
+    paths:
+      - '.github/workflows/android.yml'
+      - 'app/**'
+      - 'build-logic/**'
+      - 'kotlinc/**'
+      - 'gradle/**'
+      - 'build.gradle'
+      - 'gradle.properties'
+      - 'gradlew'
+      - 'gradlew.bat'
+      - 'public-stable-ids.txt'
+      - 'settings.gradle'
+  pull_request:
+    paths:
+      - '.github/workflows/android.yml'
+      - 'app/**'
+      - 'build-logic/**'
+      - 'kotlinc/**'
+      - 'gradle/**'
+      - 'build.gradle'
+      - 'gradle.properties'
+      - 'gradlew'
+      - 'gradlew.bat'
+      - 'public-stable-ids.txt'
+      - 'settings.gradle'
+  workflow_dispatch:
+  
 jobs:
   build:
     name: Build debug apk
@@ -33,5 +57,12 @@ jobs:
       - name: Upload debug apk
         uses: actions/upload-artifact@v3
         with:
-          name: TrindadeWare-Debug
-          path: app/build/outputs/apk/
+          name: TrindadeWare-Debug-21
+          path: app/build/outputs/apk/minApi21/debug
+          
+      - name: Upload debug apk
+        uses: actions/upload-artifact@v3
+        with:
+          name: TrindadeWare-Debug-26
+          path: app/build/outputs/apk/minApi26/debug
+              
