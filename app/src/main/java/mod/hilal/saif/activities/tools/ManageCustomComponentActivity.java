@@ -20,6 +20,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.activity.EdgeToEdge;
 
 import com.besome.sketch.lib.base.CollapsibleViewHolder;
 import com.besome.sketch.lib.ui.CollapsibleButton;
@@ -43,9 +44,8 @@ import mod.elfilibustero.sketch.editor.component.CollapsibleCustomComponentLayou
 import mod.elfilibustero.sketch.lib.ui.SketchFilePickerDialog;
 import mod.hey.studios.util.Helper;
 import mod.hilal.saif.components.ComponentsHandler;
-import mod.trindade.dev.theme.ThemedActivity; 
 
-public class ManageCustomComponentActivity extends ThemedActivity {
+public class ManageCustomComponentActivity extends AppCompatActivity {
 
     private List<HashMap<String, Object>> componentsList = new ArrayList<>();
 
@@ -57,6 +57,7 @@ public class ManageCustomComponentActivity extends ThemedActivity {
 
     @Override
     protected void onCreate(Bundle _savedInstanceState) {
+        EdgeToEdge.enable(this);
         super.onCreate(_savedInstanceState);
         setContentView(R.layout.manage_custom_component);
         init();

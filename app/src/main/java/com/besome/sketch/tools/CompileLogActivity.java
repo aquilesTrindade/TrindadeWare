@@ -26,9 +26,8 @@ import mod.hey.studios.util.CompileLogHelper;
 import mod.hey.studios.util.Helper;
 import mod.jbk.diagnostic.CompileErrorSaver;
 import mod.jbk.util.AddMarginOnApplyWindowInsetsListener;
-import mod.trindade.dev.theme.ThemedActivity;  
 
-public class CompileLogActivity extends ThemedActivity {
+public class CompileLogActivity extends AppCompatActivity {
 
     private static final String PREFERENCE_WRAPPED_TEXT = "wrapped_text";
     private static final String PREFERENCE_USE_MONOSPACED_FONT = "use_monospaced_font";

@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.activity.EdgeToEdge;
 
 import com.google.gson.Gson;
 import com.sketchware.remod.R;
@@ -29,9 +30,8 @@ import mod.hasrat.tools.ComponentHelper;
 import mod.hey.studios.util.Helper;
 import mod.hilal.saif.components.ComponentsHandler;
 import mod.jbk.util.OldResourceIdMapper;
-import mod.trindade.dev.theme.ThemedActivity; 
 
-public class AddCustomComponentActivity extends ThemedActivity implements View.OnClickListener {
+public class AddCustomComponentActivity extends AppCompatActivity implements View.OnClickListener {
 
     private boolean isEditMode = false;
     private int position = 0;
@@ -42,6 +42,7 @@ public class AddCustomComponentActivity extends ThemedActivity implements View.O
 
     @Override
     protected void onCreate(Bundle _savedInstanceState) {
+        EdgeToEdge.enable(this);
         super.onCreate(_savedInstanceState);
         binding = ManageCustomComponentAddBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());

@@ -99,10 +99,6 @@
                 <data android:pathPattern=".*\\..*\\.swb" />
                 <data android:pathPattern=".*\\..*\\..*\\.swb" />
                 <data android:pathPattern=".*\\..*\\..*\\..*\\.swb" />
-                <data android:pathPattern=".*\\.setup" />
-                <data android:pathPattern=".*\\..*\\.setup" />
-                <data android:pathPattern=".*\\..*\\..*\\.setup" />
-                <data android:pathPattern=".*\\..*\\..*\\..*\\.setup" />
             </intent-filter>
         </activity>
         <activity
@@ -255,8 +251,7 @@
             android:configChanges="orientation|screenSize" />
         <activity
             android:name="mod.hey.studios.code.SrcCodeEditor"
-            android:configChanges="orientation|screenSize"
-            android:theme="@style/Theme.MaterialComponents.Light.DarkActionBar.Bridge" />
+            android:configChanges="orientation|screenSize" />
         <activity
             android:name="mod.hey.studios.project.proguard.ManageProguardActivity"
             android:configChanges="orientation|screenSize" />
@@ -300,7 +295,7 @@
             android:name="mod.hilal.saif.activities.tools.EventsMakerDetails"
             android:configChanges="orientation|screenSize" />
         <activity
-            android:name="mod.hilal.saif.activities.tools.Tools"
+            android:name="mod.hilal.saif.activities.tools.AppSettings"
             android:configChanges="orientation|screenSize" />
         <activity
             android:name="mod.ilyasse.activities.about.AboutModActivity"
@@ -314,7 +309,10 @@
         <activity
             android:name="mod.khaled.logcat.LogReaderActivity"
             android:configChanges="orientation|screenSize|screenLayout|smallestScreenSize" />
-
+            
+        <activity
+            android:name="mod.trindadedev.ui.settings.appearance.AppearanceActivity" />
+            
         <meta-data
             android:name="firebase_crashlytics_collection_enabled"
             android:value="true" />

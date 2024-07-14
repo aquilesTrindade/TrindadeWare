@@ -2,71 +2,92 @@
   <img src="assets/Sketchware-Pro.png" style="width: 30%;" />
 </p>
 
-# TrindadeWare
-<div align="center">
-    <a href="LICENSE">
-        <img src="https://img.shields.io/github/license/6eero/newpass.svg?color=2196F3&style=for-the-badge&logo=gitbook&logoColor=ebebf0&labelColor=23232F" alt="License">
-    </a>
-    <a href="https://github.com/aquilesTrindade/TrindadeWare/releases">
-        <img src="https://img.shields.io/github/downloads/aquilesTrindade/TrindadeWare/total.svg?color=2196F3&style=for-the-badge&logo=github&logoColor=ebebf0&labelColor=23232F" alt="GitHub release">
-    </a>
-    <a href="https://github.com/aquilesTrindade/TrindadeWare/stargazers">
-        <img src="https://img.shields.io/github/stars/aquilesTrindade/TrindadeWare.svg?color=2196F3&style=for-the-badge&logo=apachespark&logoColor=ebebf0&labelColor=23232F" alt="Stars Count">
-    </a>
-</div>
-<div align="center">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/aquilesTrindade/TrindadeWare?color=2196F3&style=for-the-badge&logo=github&logoColor=ebebf0&labelColor=23232F">
-    <a href="https://github.com/aquilesTrindade/TrindadeWare/releases">
-        <img src="https://img.shields.io/github/v/release/aquilesTrindade/TrindadeWare?color=2196F3&style=for-the-badge&logo=pkgsrc&logoColor=ebebf0&labelColor=23232F" alt="GitHub release">
-    </a>
-</div>
-Bem-vindo ao TrindadeWare! Aqui você encontrará o código fonte de muitas classes do TrindadeWare e do Sketchware, o mais importante, o local para contribuir com o TrindadeWare.
- 
-## Construindo o aplicativo 
-Para construir o aplicativo, você deve usar o Gradle. É altamente recomendável usar o Android Studio para obter a melhor experiência.
- 
-Existem duas variantes de construção com recursos diferentes: 
+# Sketchware Pro
+[![GitHub contributors](https://img.shields.io/github/contributors/Sketchware-Pro/Sketchware-Pro)](https://github.com/Sketchware-Pro/Sketchware-Pro/graphs/contributors)
+[![GitHub last commit](https://img.shields.io/github/last-commit/Sketchware-Pro/Sketchware-Pro)](https://github.com/Sketchware-Pro/Sketchware-Pro/commits/)
+[![Discord server stats](https://img.shields.io/discord/790686719753846785)](http://discord.gg/kq39yhT4rX)
+[![Total downloads](https://img.shields.io/github/downloads/Sketchware-Pro/Sketchware-Pro/total)](https://github.com/Sketchware-Pro/Sketchware-Pro/releases)
+[![Repository Size](https://img.shields.io/github/repo-size/Sketchware-Pro/Sketchware-Pro)](https://github.com/Sketchware-Pro/Sketchware-Pro)
 
-- `minApi26:` Esta variante oferece suporte à exportação de AABs de projetos e à compilação de código Java 1.8, 1.9, 10 e 11. No entanto, só funciona no Android 8.0 (O) e superior. 
-- `minApi21:` Esta variante não pode produzir AABs de projetos e só pode compilar código Java 1.7, mas oferece suporte ao Android 5 e superior. 
+Welcome to Sketchware Pro! Here you'll find the source code of many classes in Sketchware Pro and, most importantly, the place to contribute to Sketchware Pro.
 
-Para selecionar a variante de build apropriada no Android Studio, use a guia Build Variants ou use o comando de build apropriado do Gradle. 
+## Building the App
+To build the app, you must use Gradle. It's highly recommended to use Android Studio for the best experience.
 
-### Mapa de código-fonte
- 
+There are two build variants with different features:
+
+- `minApi26:` This variant supports exporting AABs from projects and compiling Java 1.8, 1.9, 10, and 11 code. However, it only works on Android 8.0 (O) and above.
+- `minApi21:` This variant can't produce AABs from projects and can only compile Java 1.7 code, but it supports Android 5 and above.
+
+To select the appropriate build variant in Android Studio, use the Build Variants tab or use the appropriate Gradle build command.
+
+### Source Code Map
+
 | Class           | Role                                        |
 | --------------- | ------------------------------------------- |
-| `a.a.a.ProjectBuilder`      | Auxiliar para compilar um projeto inteiro        |
-| `a.a.a.Ix`      | Responsável por gerar AndroidManifest.xml  |
-| `a.a.a.Jx`      | Gera código fonte das atividades           |
-| `a.a.a.Lx`      | Gera código-fonte de componentes, como ouvintes, etc.  |
-| `a.a.a.Ox`      | Responsável por gerar arquivos XML de layouts  |
-| `a.a.a.qq`      | Registro de dependências de bibliotecas integradas  |
-| `a.a.a.tq`      | Responsável pelos questionários do diálogo de compilação  |
-| `a.a.a.yq`      | Organiza os caminhos dos arquivos dos projetos do Sketchware     |
+| `a.a.a.ProjectBuilder`      | Helper for compiling an entire project       |
+| `a.a.a.Ix`      | Responsible for generating AndroidManifest.xml |
+| `a.a.a.Jx`      | Generates source code of activities          |
+| `a.a.a.Lx`      | Generates source code of components, such as listeners, etc. |
+| `a.a.a.Ox`      | Responsible for generating XML files of layouts |
+| `a.a.a.qq`      | Registry of built-in libraries' dependencies |
+| `a.a.a.tq`      | Responsible for the compiling dialog's quizzes |
+| `a.a.a.yq`      | Organizes Sketchware projects' file paths    |
 
-> [!DICA ]
-> Você também pode verificar o pacote `mod`, que contém a maioria das alterações dos contribuidores. 
+> [!TIP]
+> You can also check the `mod` package, which contains the majority of contributors' changes.
 
-## Avisos
-> O módulo [app-trindadeware] é onde está as alterações do TrindadeWare,  por conta de bugs ainda não estão no app.
+## Contributing
 
-## Contribuindo 
+If you'd like to contribute to Sketchware Pro, follow these steps:
 
-Se você gostaria de contribuir com o TrindadeWare, siga estes passos: 
+1. Fork this repository.
+2. Make changes in your forked repository.
+3. Test out those changes.
+4. Create a pull request in this repository.
+5. Your pull request will be reviewed by the repository members and merged if accepted.
 
-1. Bifurque este repositório. 
-2. Faça alter
- ações em seu repositório bifurcado. 
-3. Teste essas mudanças. 
-4. Crie uma solicitação pull neste repositório. 
-5. Sua solicitação pull será revisada pelos membros do repositório e mesclada se for aceita. 
+We welcome contributions of any size, whether they are major features or bug fixes, but please note that all contributions will be thoroughly reviewed.
 
-> Aviso: se for criar uma nova tela faca isso: 
-- Ao inves de usar [Activity] ou [AppCompatActivity] use [ThemedActivity]: Porque? : Porquê usando essa Activity você já tera o sistema de temas adicionado em sua tela!
+### What Changes We're Unlikely to Accept
 
-Aceitamos contribuições de qualquer tamanho, sejam elas recursos importantes ou correções de bugs, mas observe que todas as contribuições serão revisadas minuciosamente.
+Most changes related to the user interface (components that already exist in vanilla Sketchware) are unlikely to be accepted. If something design-related gets changed, ideally the whole app should follow the new style too, which is challenging, especially for mods.
+> [!NOTE]
+> In the meantime, we don't accept UI changes in the main branch, but we do in the [redesign branch](https://github.com/Sketchware-Pro/Sketchware-Pro/tree/material-redesign) since we're actively working on a material design version of Sketchware Pro.
 
-## Obrigado por contribuir 
+### Commit Message
 
-Obrigado por contribuir com TrindadeWare! Suas contribuições ajudam a manter o TrindadeWare vivo. Cada contribuição aceita será anotada na atividade "Sobre Modders". Usaremos inicialmente seu nome GitHub e foto de perfil, mas eles podem ser alterados, é claro. 
+When you make changes to one or more files, you need to commit those changes with a commit message. Here are some guidelines:
+
+- Keep the commit message short and detailed.
+- Use one of these commit types as a prefix:
+  - `feat:` for a feature, possibly improving something already existing.
+  - `fix:` for a fix, such as a bug fix.
+  - `style:` for features and updates related to styling.
+  - `refactor:` for refactoring a specific section of the codebase.
+  - `test:` for everything related to testing.
+  - `docs:` for everything related to documentation.
+  - `chore:` for code maintenance (you can also use emojis to represent commit types).
+
+Examples:
+- `feat: Speed up compiling with new technique`
+- `fix: Fix crash during launch on certain phones`
+- `refactor: Reformat code in File.java`
+
+## Thanks for Contributing
+
+Thank you for contributing to Sketchware Pro! Your contributions help keep Sketchware Pro alive. Each accepted contribution will be noted down in the "About Modders" activity. We'll use your GitHub name and profile picture initially, but they can be changed, of course.
+
+## Discord
+
+Want to chat with us, discuss changes, or just hang out? We have a Discord server just for that.
+
+[![Join our Discord server!](https://invidget.switchblade.xyz/kq39yhT4rX)](http://discord.gg/kq39yhT4rX)
+
+## Disclaimer
+
+This mod was not created for any harmful purposes, such as harming Sketchware; quite the opposite, actually. It was made to keep Sketchware alive by the community for the community. Please use it at your own discretion and consider becoming a Patreon backer to support the developers. Unfortunately, other ways to support them are not working anymore, so Patreon is the only available option currently. You can find their Patreon page [here](https://www.patreon.com/sketchware).
+
+We do NOT permit publishing Sketchware Pro as it is, or with modifications, on Play Store or on any other app store. Keep in mind that this project is still a mod. Unauthorized modding of apps is considered illegal and we discourage such behavior.
+
+We love Sketchware very much and are grateful to Sketchware's developers for creating such an amazing app. However, we haven't received updates for a long time. That's why we decided to keep Sketchware alive by creating this mod, and it's completely free. We don't demand any money :)

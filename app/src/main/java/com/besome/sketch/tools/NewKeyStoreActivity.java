@@ -12,7 +12,6 @@ import androidx.appcompat.widget.Toolbar;
 
 import com.besome.sketch.lib.base.BaseAppCompatActivity;
 import com.google.android.material.textfield.TextInputLayout;
-import com.google.android.material.appbar.MaterialToolbar; 
 import com.sketchware.remod.R;
 
 import a.a.a.RB;
@@ -142,16 +141,14 @@ public class NewKeyStoreActivity extends BaseAppCompatActivity implements OnClic
         }
 
         setContentView(R.layout.keystore_new);
-        
-        MaterialToolbar materialToolbar = findViewById(R.id.toolbar);        
-        materialToolbar.setNavigationIcon(R.drawable.ic_back);                
-        setSupportActionBar(materialToolbar);
-        
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        findViewById(R.id.layout_main_logo).setVisibility(View.GONE);
         getSupportActionBar().setTitle(Helper.getResString(R.string.myprojects_sign_apk_new_certificate_title_new_certificate));
         getSupportActionBar().setSubtitle("Export path: " + wq.D);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowTitleEnabled(true);
-        materialToolbar.setNavigationOnClickListener(Helper.getBackPressedClickListener(this));
+        toolbar.setNavigationOnClickListener(Helper.getBackPressedClickListener(this));
         E = new iI();
 
 

@@ -1,81 +1,62 @@
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
-        android:fitsSystemWindows="true"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
 
-     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBarLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fitsSystemWindows="true">
+    <include layout="@layout/toolbar_improved" />
 
-        <com.google.android.material.appbar.CollapsingToolbarLayout
-            android:id="@+id/collapsingToolbar"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
-            android:layout_height="?attr/collapsingToolbarLayoutLargeSize"
-            android:fitsSystemWindows="true"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            style="?attr/materialCardViewFilledStyle"
+            app:cardBackgroundColor="?attr/colorSurfaceContainerHigh">
 
-            <com.google.android.material.appbar.MaterialToolbar
-                android:id="@+id/toolbar"
+            <LinearLayout
+                android:id="@+id/layout_switch"
                 android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                app:layout_collapseMode="pin"
-                app:navigationIcon="@drawable/ic_back"
-                app:menu="@menu/library_exclude"
-                app:title="Exclude built-in-libraries" />
-        </com.google.android.material.appbar.CollapsingToolbarLayout>
-     </com.google.android.material.appbar.AppBarLayout>
-        <androidx.core.widget.NestedScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior">
-            
-       <LinearLayout 
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:layout_marginBottom="16dp"
-            android:orientation="vertical" >    
-
-        <LinearLayout
-            android:id="@+id/layout_switch"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:background="?selectableItemBackground"
-            android:clickable="true"
-            android:focusable="true"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:paddingVertical="8dp">
-
-            <TextView
-                android:id="@+id/tv_enable"
-                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ellipsize="end"
-                android:singleLine="true"
-                android:textColor="?colorError"
-                android:textSize="14sp"
-                tools:text="@string/design_library_settings_title_enabled" />
+                android:background="?selectableItemBackground"
+                android:paddingHorizontal="14dp"
+                android:paddingVertical="6dp"
+                android:gravity="center"
+                android:orientation="horizontal">
 
-            <com.google.android.material.materialswitch.MaterialSwitch
-                android:id="@+id/lib_switch"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:layout_marginLeft="8dp"
-                android:clickable="false" />
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/tv_enable"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="?colorControlNormal"
+                    android:textSize="18sp"
+                    tools:text="@string/design_library_settings_title_enabled" />
 
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/lib_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="8dp"
+                    android:clickable="false" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="16dp"
+            android:layout_weight="1"
+            android:fillViewport="true">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -102,7 +83,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="left"
-                        
+                        android:textColor="#ff757575"
                         android:textSize="14sp"
                         tools:text="This might break your project if you don't know what you're doing!" />
                 </LinearLayout>
@@ -125,17 +106,18 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        
+                        android:textColor="?colorControlNormal"
                         android:textSize="14sp"
                         android:textStyle="bold"
                         tools:text="Excluded built-in libraries" />
                 </LinearLayout>
 
-                <androidx.cardview.widget.CardView
+                <com.google.android.material.card.MaterialCardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="4dp"
-                    >
+                    style="?attr/materialCardViewFilledStyle"
+                    app:cardBackgroundColor="?attr/colorSurfaceContainerHigh">
 
                     <LinearLayout
                         android:id="@+id/item"
@@ -152,14 +134,12 @@
                             android:layout_gravity="center_vertical"
                             android:layout_weight="1"
                             android:padding="8dp"
-                            
+                            android:textColor="?colorControlNormal"
                             android:textSize="12sp"
                             tools:text="firebase-common-19.3.1, firebase-database-19.3.1" />
                     </LinearLayout>
-                </androidx.cardview.widget.CardView>
+                </com.google.android.material.card.MaterialCardView>
             </LinearLayout>
-           </LinearLayout>
-        </androidx.core.widget.NestedScrollView>
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
-
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

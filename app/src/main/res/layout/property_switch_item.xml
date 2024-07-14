@@ -1,34 +1,35 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="?selectableItemBackground">
 
     <TextView
-        android:id="@id/tv_name"
+        android:id="@+id/tv_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="12dp"
-        android:layout_marginRight="8dp"
-        android:layout_toLeftOf="@id/switch_value"
-        android:textColor="#ff868686"
+        android:layout_marginRight="16dp"
+        android:layout_toLeftOf="@+id/switch_value"
+        android:textColor="?attr/colorOnSurface"
         android:textSize="16sp" />
 
     <TextView
-        android:id="@id/tv_desc"
+        android:id="@+id/tv_desc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tv_name"
+        android:layout_below="@+id/tv_name"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="16dp"
         android:layout_marginBottom="16dp"
-        android:layout_toLeftOf="@id/switch_value"
-        android:textColor="#ff606060"
+        android:layout_toLeftOf="@+id/switch_value"
+        android:textColor="?attr/colorOnSurfaceVariant"
         android:textSize="14sp" />
 
-    <Switch
-        android:id="@id/switch_value"
+    <com.google.android.material.materialswitch.MaterialSwitch
+        android:id="@+id/switch_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
@@ -36,10 +37,4 @@
         android:layout_marginRight="16dp"
         android:clickable="false"
         android:focusable="false" />
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_alignParentBottom="true"
-        android:background="#fff6f6f6" />
 </RelativeLayout>

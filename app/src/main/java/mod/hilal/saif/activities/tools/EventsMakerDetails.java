@@ -27,9 +27,8 @@ import java.util.HashMap;
 import mod.SketchwareUtil;
 import mod.agus.jcoderz.lib.FileUtil;
 import mod.hey.studios.util.Helper;
-import mod.trindade.dev.theme.ThemedActivity; 
 
-public class EventsMakerDetails extends ThemedActivity {
+public class EventsMakerDetails extends Activity {
 
     private final ArrayList<HashMap<String, Object>> listMap = new ArrayList<>();
     private AlertDialog.Builder dia;

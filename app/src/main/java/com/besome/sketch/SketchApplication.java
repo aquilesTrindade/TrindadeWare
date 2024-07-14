@@ -1,26 +1,25 @@
 package com.besome.sketch;
 
+import static mod.SketchwareUtil.toastError;
+
 import android.app.AlarmManager;
 import android.app.Application;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Process;
 import android.util.Log;
 
 import com.besome.sketch.tools.CollectErrorActivity;
 
 import com.google.android.gms.analytics.Tracker;
-import com.google.android.material.color.DynamicColors;
 
-import mod.trindade.dev.theme.AppTheme; 
+import mod.trindadedev.manage.theme.ThemeManager;
 
 public class SketchApplication extends Application {
 
     private static Context mApplicationContext;
-    private static AppTheme appThemeHelper;
-    
+
     public static Context getContext() {
         return mApplicationContext;
     }
@@ -32,10 +31,9 @@ public class SketchApplication extends Application {
     @Override
     public void onCreate() {
         mApplicationContext = getApplicationContext();
-        appThemeHelper = new AppTheme(this);
         Thread.UncaughtExceptionHandler uncaughtExceptionHandler = Thread.getDefaultUncaughtExceptionHandler();
         Thread.setDefaultUncaughtExceptionHandler((thread, throwable) -> {
-            Log.e("SketchApplication", "Uncaught exception  thread " + thread.getName(), throwable);
+            Log.e("SketchApplication", "Uncaught exception on thread " + thread.getName(), throwable);
 
             Intent intent = new Intent(getApplicationContext(), CollectErrorActivity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
@@ -52,8 +50,11 @@ public class SketchApplication extends Application {
             }
         });
         super.onCreate();
-        if (appThemeHelper.getDynamic()) {
-            DynamicColors.applyToActivitiesIfAvailable(this);
+        try {
+            ThemeManager.applyTheme(this, this);
+            ThemeManager.applyTheme(this, ThemeManager.getSketchwareTheme(this));
+        } catch (Exception e) {
+            toastError(e.getMessage(), 4000);
         }
     }
 }

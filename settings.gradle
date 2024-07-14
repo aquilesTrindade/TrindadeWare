@@ -7,7 +7,7 @@ dependencyResolutionManagement {
         maven { url "https://s01.oss.sonatype.org/content/repositories/snapshots" }
     }
 }
-rootProject.name = "TrindadeWare"
+rootProject.name = "Sketchware Pro"
 include ":app"
 include ':kotlinc'
 include ':jaxp:xml'

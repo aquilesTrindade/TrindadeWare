@@ -27,31 +27,28 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@id/tv_guide"
+                        android:id="@+id/tv_guide"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_weight="1"
-                        android:background="#fff6f6f6"
                         android:gravity="center"
                         android:text="@string/design_manager_image_description_guide_add_image"
-                        android:textColor="@color/grey"
                         android:textSize="14sp"
                         android:visibility="gone" />
 
                     <androidx.recyclerview.widget.RecyclerView
-                        android:id="@id/font_list"
+                        android:id="@+id/font_list"
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
                         android:layout_marginTop="2dp"
                         android:layout_weight="1"
-                        android:background="#fff5f5f5"
                         android:scrollbars="vertical"
                         android:splitMotionEvents="false" />
                 </LinearLayout>
             </ScrollView>
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@id/fab"
+                android:id="@+id/fab"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|end"
@@ -63,17 +60,16 @@
         </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
         <LinearLayout
-            android:id="@id/layout_btn_group"
+            android:id="@+id/layout_btn_group"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:background="#ffffffff"
             android:orientation="horizontal"
             android:padding="4dp"
             android:visibility="gone">
 
             <com.google.android.material.button.MaterialButton
-                android:id="@id/btn_cancel"
+                android:id="@+id/btn_cancel"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -82,7 +78,7 @@
                 app:backgroundTint="?colorAccent" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@id/btn_delete"
+                android:id="@+id/btn_delete"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="8dp"
@@ -92,7 +88,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@id/btn_import"
+        android:id="@+id/btn_import"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

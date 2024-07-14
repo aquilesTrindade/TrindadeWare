@@ -29,7 +29,7 @@ android {
         //noinspection ExpiredTargetSdkVersion since we don't target getting Sketchware Pro on Google Play.
         targetSdkVersion 28
         versionCode 150
-        versionName "1.0.0-" + getCommitHash()
+        versionName "v6.4.0-SNAPSHOT-" + getCommitHash()
 
         buildConfigField("String", "GIT_HASH", "\"${gitCommitHash}\"")
 
@@ -46,14 +46,14 @@ android {
         minApi26 {
             dimension "api"
             minSdkVersion 26
-            versionNameSuffix "-26"
+            versionNameSuffix "-minApi26"
             isDefault = true
         }
 
         minApi21 {
             dimension "api"
             minSdkVersion 21
-            versionNameSuffix "-21"
+            versionNameSuffix "-minApi21"
         }
     }
 
@@ -124,7 +124,7 @@ dependencies {
     implementation "$editorGroupId:language-textmate"
 
     implementation "de.hdodenhof:circleimageview:3.1.0"
-    //implementation "com.github.angads25:filepicker:1.1.1"
+    implementation "com.github.angads25:filepicker:1.1.1"
 
     minApi26Implementation "com.android.tools.build:bundletool:1.15.1"
     //noinspection GradleDependency copied from above dependency for not just runtime access
@@ -141,7 +141,7 @@ dependencies {
     implementation "com.squareup.okhttp3:okhttp:4.10.0"
     //noinspection GradleDependency
     implementation "com.squareup.okio:okio:3.1.0"
-    implementation "com.github.Cosmic-Ide:DependencyResolver:868996895a"
+    implementation "com.github.Cosmic-Ide:DependencyResolver:290880eb6c"
 
     minApi21Implementation "net.sf.proguard:proguard-base:6.0.3"
     minApi26Implementation files('libs/proguard-base-7.2.2.jar')
@@ -156,6 +156,8 @@ dependencies {
 
     implementation "com.github.topjohnwu.libsu:core:5.0.4"
     implementation "dev.chrisbanes.insetter:insetter:0.6.1"
+
+    debugImplementation "com.squareup.leakcanary:leakcanary-android:2.14"
 
     // Analytics and Crashlytics
     if (analyticsEnabled) {

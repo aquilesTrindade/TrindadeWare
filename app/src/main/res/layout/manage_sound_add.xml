@@ -41,8 +41,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="4dp"
-                    android:text="Add Sound"
-                    android:textColor="#ff7d7d7d"
+                    android:text="@string/add_sound"
                     android:textSize="12sp" />
             </LinearLayout>
         </RelativeLayout>
@@ -117,7 +116,7 @@
                 android:layout_marginTop="12dp"
                 android:layout_marginEnd="16dp"
                 android:textSize="12sp"
-                app:layout_constraintEnd_toEndOf="@id/seek"
+                app:layout_constraintEnd_toEndOf="@+id/seek"
                 app:layout_constraintTop_toBottomOf="@+id/seek"
                 tools:text="00:00" />
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -132,10 +131,10 @@
         android:importantForAutofill="noExcludeDescendants">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@id/ed_input"
+            android:id="@+id/ed_input"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter sound name"
+            android:hint="@string/enter_sound_name"
             android:imeOptions="actionDone"
             android:inputType="text"
             android:lines="1" />
@@ -145,5 +144,5 @@
         android:id="@+id/chk_collection"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add to my collection" />
+        android:text="@string/add_to_collection" />
 </LinearLayout>

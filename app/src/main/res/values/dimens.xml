@@ -52,14 +52,4 @@
     <dimen name="inputfields_corners_radius">10dp</dimen>
     <dimen name="collapsing_toolbar_large_size">132dp</dimen>
     <dimen name="logcat_bottom_sheet_peek_height">90dp</dimen>
-    
-    <dimen name="corner_radius_base">20dp</dimen>
-    <dimen name="spacing_tiny">4dp</dimen>
-    
-    
-        <dimen name="activity_margin">4dp</dimen>
-    <dimen name="checkbox_margin">8dp</dimen>
-    <dimen name="toolbar_image_margin">16dp</dimen>
-    <dimen name="checkbox_dimens">24dp</dimen>
-
 </resources>

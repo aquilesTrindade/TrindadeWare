@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?attr/colorBackground"
     android:fitsSystemWindows="true">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -46,7 +45,7 @@
             android:layout_marginTop="10dp"
             android:textAppearance="?attr/textAppearanceBodyMedium"
             android:textColor="?attr/colorPrimary"
-            tools:text="Aquiles Trindade" />
+            tools:text="Jbk0 Bean" />
 
     </LinearLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

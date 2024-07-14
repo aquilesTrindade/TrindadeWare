@@ -1,4 +1,22 @@
 <resources>
+
+    <style name="AppTheme.CollapsingToolbar" parent="Widget.Material3.CollapsingToolbar.Large">
+        <item name="collapsedTitleTextAppearance">@style/MaterialToolbarTextCollapsedAppearance
+        </item>
+        <item name="expandedTitleTextAppearance">@style/MaterialToolbarTextExpandedAppearance</item>
+        <item name="titleCollapseMode">scale</item>
+    </style>
+
+    <style name="AppTheme.Design.Toolbar" parent="Widget.Material3.Toolbar">
+        <item name="titleTextAppearance">?attr/textAppearanceBodyLarge</item>
+        <item name="subtitleTextAppearance">?attr/textAppearanceBodyMedium</item>
+    </style>
+
+    <style name="AppTheme.Check.White" parent="@style/Base.Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="colorControlActivated">@color/color_chk_white_highlight</item>
+        <item name="colorControlNormal">@color/color_chk_white_normal</item>
+    </style>
+
     <style name="CardViewStyle.White" parent="@style/CardView">
         <item name="cardBackgroundColor">@color/cardview_light_background</item>
     </style>
@@ -158,6 +176,31 @@
         <item name="android:textColor">@color/primary_text_default_material_dark</item>
     </style>
 
+    <style name="Theme.AppCompat.Light.NoActionBar.FullScreen" parent="@style/AppTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.AppCompat.Light.NoActionBar.Translucent" parent="@style/AppTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.AppCompat.Light.NoActionBar.Translucent.FullScreen" parent="@style/AppTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
 
     <style name="Theme.AppCompat.NoActionBar" parent="@style/Theme.AppCompat">
         <item name="windowActionBar">false</item>
@@ -232,7 +275,14 @@
         <item name="android:background">?selectableItemBackground</item>
         <item name="android:colorControlHighlight">@color/color_control_normal</item>
     </style>
-    
+
+    <style name="AppTheme.Et" parent="@style/AppTheme">
+        <item name="colorControlHighlight">@android:color/transparent</item>
+        <item name="colorControlNormal">@android:color/transparent</item>
+        <item name="colorPrimary">#ff212121</item>
+        <item name="colorPrimaryDark">#ff000000</item>
+    </style>
+
     <style name="AboutPageTabLayout" parent="Base.Widget.Design.TabLayout">
         <item name="tabTextAppearance">@style/MyTabTextAppearance</item>
     </style>
@@ -242,23 +292,23 @@
         <item name="textAllCaps">false</item>
     </style>
     
-    <style name="Gam.Card" parent="Widget.Material3.CardView.Filled">
-        <item name="android:layout_marginLeft">10dp</item>
-        <item name="android:layout_marginRight">10dp</item>
-        <item name="android:layout_marginTop">10dp</item>
+    <!-- view pane themes -->
+    <style name="ViewEditorThemeMd2" parent="Base.Theme.MaterialComponents.Light" />
+    <style name="ViewEditorThemeMd3" parent="Base.Theme.Material3.Light" />
+
+    <!--  bottom sheet style  -->
+    <style name="BottomSheetCardStyle" parent="">
+        <item name="cornerFamilyTopLeft">rounded</item>
+        <item name="cornerFamilyTopRight">rounded</item>
+        <item name="cornerSizeTopLeft">20dp</item>
+        <item name="cornerSizeTopRight">20dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
     </style>
-    
-    <style name="Gam.Title" parent="@style/Widget.Material3.CollapsingToolbar.Large">
-        <item name="fontFamily">@font/app_font</item>
+
+    <style name="BottomSheetAnimation">
+        <item name="android:windowEnterAnimation">@anim/design_bottom_sheet_slide_in</item>
+        <item name="android:windowExitAnimation">@anim/design_bottom_sheet_slide_out</item>
     </style>
-    <!-- Button Style -->
-    <style name="Gam.Button" parent="@style/Widget.Material3.Button">
-        <item name="fontFamily">@font/app_font</item>
-    </style>
-    
-    <style name="DialogAnimation">
-       <item name="android:windowEnterAnimation">@anim/m3_motion_fade_enter</item>
-       <item name="android:windowExitAnimation">@anim/m3_motion_fade_exit</item>
-    </style>
-    
+
 </resources>

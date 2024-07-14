@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TrindadeWare</string>
+    <string name="app_name">Sketchware Pro</string>
     <string name="appbar_scrolling_view_behavior">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
     <string name="besome_blog_url">http://medium.com/sketchware</string>
     <string name="block_add_list_int_body_1">to</string>
@@ -979,6 +979,7 @@ Please click on Settings to allow permission for Storage. Without this permissio
     <string name="common_word_project_information_app_name">App Name</string>
     <string name="common_word_project_information_package">Package</string>
     <string name="common_word_project_information_project">Project</string>
+    <string name="common_word_project_information_project_settings">Project settings</string>
     <string name="common_word_project_information_version_code">Version code</string>
     <string name="common_word_project_information_version_name">Version name</string>
     <string name="common_word_public">public</string>
@@ -998,7 +999,7 @@ Please click on Settings to allow permission for Storage. Without this permissio
     <string name="common_word_share">Share</string>
     <string name="common_word_show">Show</string>
     <string name="common_word_sound">Sound</string>
-    <string name="common_word_step">STEP %d</string>
+    <string name="common_word_step">Step %d</string>
     <string name="common_word_submit">Submit</string>
     <string name="common_word_try_again">Try Again</string>
     <string name="common_word_update">Update</string>
@@ -1009,6 +1010,14 @@ Please click on Settings to allow permission for Storage. Without this permissio
     <string name="common_word_watch">Watch</string>
     <string name="common_word_widget">Widget</string>
     <string name="common_word_yes">Yes</string>
+    <string name="common_word_undo">Undo</string>
+    <string name="common_word_redo">Redo</string>
+    <string name="common_word_help">Help</string>
+    <string name="common_word_rename">Rename</string>
+    <string name="common_word_activities">Activities</string>
+    <string name="common_word_editor">Code editor</string>
+    <string name="common_word_activated">Activated</string>
+    <string name="common_word_code_editor">Code Editor</string>
     <string name="component_add_docs_button_title_go_to_docs">Read Documentation</string>
     <string name="component_add_message_docs_updated_soon">The docs page will be updated soon</string>
     <string name="component_context_menu_title">Component menu</string>
@@ -1267,7 +1276,7 @@ You must enter the API key to operate the map normally."</string>
     <string name="developer_tools_component_type_class">Type Class</string>
     <string name="developer_tools_component_type_name">Type Name</string>
     <string name="developer_tools_component_var_type_name">Variable Type Name</string>
-    <string name="docs_url">https://docs.sketchware.io/</string>
+    <string name="docs_url">https://docs.sketchware.pro/docs/</string>
     <string name="event_context_menu_title">Event Menu</string>
     <string name="event_context_menu_title_delete_event">Delete Event</string>
     <string name="event_context_menu_title_delete_more_block">Delete moreBlock</string>
@@ -1343,32 +1352,8 @@ Do you want to continue?"</string>
     <string name="event_title_add_new_component">Add new component</string>
     <string name="event_title_add_new_event">Add new event</string>
     <string name="event_title_edit_component">Edit component</string>
-    <string name="facebook_url">https://fb.com/sketchware</string>
     <string name="firebase_database_url">https://dependable-flag-825.firebaseio.com</string>
     <string name="ga_trackingId">UA-80718117-1</string>
-    <string name="ideas_url">https://ideas.sketchware.io/</string>
-    <string name="import_project_desc_download_complete">Download for %s completed.</string>
-    <string name="import_project_desc_download_complete_is_not_root">Download for %s completed. Refresh Project list in the project tab and check the downloaded project.</string>
-    <string name="import_project_error_invalid_id">The ID is invalid.</string>
-    <string name="import_project_title_app_name">App Name</string>
-    <string name="import_project_title_expire_dt">Expiration Date</string>
-    <string name="import_project_title_package_name">Package Name</string>
-    <string name="import_project_title_user_name">Author</string>
-    <string name="included_collection_detail_desc_no_collection_to_display">No Collection To Display</string>
-    <string name="included_collection_detail_message_check_included_collection">Download complete. Please check included collection</string>
-    <string name="included_collection_detail_message_downloading_collection_data">Downloading Collection Data</string>
-    <string name="included_collection_detail_title">Included Collection Detail</string>
-    <string name="init_language_setting_dialog_message">"Sketchware's default language is English. Would you like to change it?"</string>
-    <string name="intro_button_explore">Explore</string>
-    <string name="intro_button_sign_in">Sign In</string>
-    <string name="intro_button_start">Start</string>
-    <string name="intro_guide_desc">Try Sketchware Now!</string>
-    <string name="intro_pager_1_description">User-friendly interface and hassle-free experience</string>
-    <string name="intro_pager_1_title">Create Awesome Apps</string>
-    <string name="intro_pager_2_description">No programming experience necessary</string>
-    <string name="intro_pager_2_title">Simple Block Programming</string>
-    <string name="intro_pager_3_description">Explore and share awesome creations with others</string>
-    <string name="intro_pager_3_title">Share With the World</string>
     <string name="invalid_component">Invalid component</string>
     <string name="invalid_icon_id">Invalid icon ID</string>
     <string name="invalid_required_fields">Some required fields are empty</string>
@@ -1500,7 +1485,7 @@ But, components should be added manually for working correctly."</string>
     <string name="main_drawer_title_docs">Documentation</string>
     <string name="main_drawer_title_export_urls">Export URLs</string>
     <string name="main_drawer_title_language_settings">Language Settings</string>
-    <string name="main_drawer_title_program_information">Program information</string>
+    <string name="main_drawer_title_program_information">App information</string>
     <string name="main_drawer_title_purchase_list">Purchase List</string>
     <string name="main_drawer_title_remove_ads">Remove Ads</string>
     <string name="main_drawer_title_save_sketchware">Save Sketchware</string>
@@ -2090,7 +2075,8 @@ Please try again later"</string>
     <string name="title_compatible_chrome_browser">Chrome Browser Required</string>
     <string name="title_discord_community">Discord</string>
     <string name="title_telegram_community">Telegram</string>
-    <string name="title_sketchware">TrindadeWare</string>
+    <string name="title_github_community">Github</string>
+    <string name="title_sketchware">Sketchware Pro</string>
     <string name="view_panel_title_layouts">Layouts</string>
     <string name="view_panel_title_properties">Properties</string>
     <string name="view_panel_title_widgets">Widgets</string>
@@ -2156,12 +2142,92 @@ Please try again later"</string>
     <string name="local_library_manager">Local library Manager</string>
     <string name="local_library_manager_download">Download a library</string>
     <string name="local_library_manager_enter_dependency">Enter dependency</string>
-    <string name="local_library_manager_dependency_info">You can find the dependency of a library in Github, typically in the README file.</string>
+    <string name="local_library_manager_dependency_info">You can find the dependency of a library in GitHub, typically in the Readme file.</string>
     <string name="local_library_manager_no_libraries_title">No Local libraries available</string>
     <string name="local_library_manager_no_libraries_body">You don\'t have any Local libraries yet, try downloading one.</string>
+    <string name="local_library_manager_download_status">Download status</string>
     <string name="local_library_manager_skip_downloading_dependencies">Skip downloading sub-dependencies</string>
-
-
+    <string name="appearance">Appearance</string>
+    <string name="appearance_description">Change the appearance of the Sketchware and make it your own!</string>
+    
+    <string name="appearance_theme">Sketchware Theme</string>
+    <string name="appearance_theme_system">System default</string>
+    <string name="appearance_theme_light">Light theme</string>
+    <string name="appearance_theme_dark">Dark theme</string>
+    <string name="appearance_theme_use_dynamic">Use dynamic theme</string>
+    <string name="appearance_editors">Editors</string>
+    <string name="appearance_editors_code_editor_title">Code editor version</string>
+    <string name="appearance_editors_code_editor_description">Change the version of the code editor and the appearance changes along with it.</string>
+    <string name="appearance_editors_code_editor_legacy">Legacy 6.2.0 Code Editor</string>
+    <string name="appearance_editors_code_editor_default">Default Code Editor</string>
+    
+    <string name="appearance_viewpane">View Pane Appearance</string>
+    <string name="appearance_viewpane_description">Change the appearance of the layout editor.</string>
+    <string name="appearance_viewpane_theme">View Pane Style</string>
+    <string name="appearance_viewpane_theme_description">Use Material Design 3 in Layout View</string>
+    
+    <!-- mod settings screen -->
+    <string name="mod_settings">Mod Settings</string>
+    <string name="use_legacy_code_editor_title">Use legacy Code Editor</string>
+    <string name="use_legacy_code_editor_message">Enables old Code Editor from v6.2.0.</string>
+    <string name="built_in_blocks">Built-in blocks</string>
+    <string name="built_in_blocks_summary">May slow down loading blocks in Logic Editor.</string>
+    <string name="show_all_variable_blocks">Show all variable blocks</string>
+    <string name="show_all_variable_blocks_summary">All variable blocks will be visible, even if you dont have variables for them.</string>
+    <string name="show_all_blocks_of_palettes">Show all blocks of palettes</string>
+    <string name="show_all_blocks_of_palettes_summary">Every single available block will be shown. Will slow down opening palettes!</string>
+    <string name="backup_directory">Backup directory</string>
+    <string name="backup_directory_summary">The default directory is /Internal storage/.sketchware/backups/.</string>
+    <string name="backup_directory_help">Directory inside /Internal storage/, e.g. .sketchware/backups</string>
+    <string name="install_projects_with_root_access">Install projects with root access</string>
+    <string name="install_projects_with_root_access_summary">Automatically installs project APKs after building using root access.</string>
+    <string name="root_access_error">Couldnt acquire root access</string>
+    <string name="launch_projects_after_installing">Launch projects after installing</string>
+    <string name="launch_projects_after_installing_summary">Opens projects automatically after auto-installation using root.</string>
+    <string name="use_new_version_control">Use new Version Control</string>
+    <string name="use_new_version_control_summary">Enables custom version code and name for projects.</string>
+    <string name="enable_block_text_input_highlighting">Enable block text input highlighting</string>
+    <string name="enable_block_text_input_highlighting_summary">Enables syntax highlighting while editing blocks text parameters.</string>
+    <string name="backup_filename_format">Backup filename format</string>
+    <string name="backup_filename_format_summary">Default is "$projectName v$versionName ($pkgName, $versionCode) $time(yyyy-MM-dd'T'HHmmss)"</string>
+    <string name="signatures_title">Signatures</string>
+    <string name="reset_to_default_complete">Reset to default complete.</string>
+    <string name="detected_invalid_prefs">Detected invalid preference </string>
+    <string name="detected_invalid_prefs_reset">Detected invalid preference. Restoring defaults</string>
+    <string name="detected_invalid_prefs_msg">for backup directory. Restoring defaults</string>
+    <string name="error_to_parse_settings">Couldnt parse Mod Settings! Restoring defaults.</string>
+    <string name="detected_invalid_value">Detected invalid value for preference \"</string>
+    <string name="restoring_to_default">\". Restoring defaults</string>
+    <string name="detected_invalid_prefs_backup_filename">for backup filename. Restoring defaults</string>
+    <string name="detected_invalid_prefs_legacy">Detected invalid preference for legacy</string>
+    <string name="detected_invalid_prefs_code_editor"> Code Editor. Restoring defaults</string>
+    <string name="change_project_settings">Change project settings</string>
+    <string name="stringfog_manager">StringFog Manager</string>
+    <string name="stringfog_manager_about">Activating StringFog will encrypt the strings in compilation time, which will make your app more difficult to reverse-engineer.</string>
+    <string name="generating_source">Generating source code, please wait.</string>
+    <string name="add_to_collection">Add to my collection</string>
+    <string name="enter_sound_name">Enter sound name</string>
+    <string name="add_sound">Add Sound</string>
+    <string name="customview_about">Custom View can be used to change the way items are displayed inside the ListView or the Spinner</string>
+    <string name="enter_activity_name">Enter activity name</string>
+    <string name="type">Type</string>
+    
+    <!-- menus -->
+    <string name="create_keystore">Create keystore</string>
+    <string name="about_title_drawer">About the team</string>
+    <string name="related_links">Related links</string>
+    <string name="blocks_collection">Blocks collection</string>
+    <string name="add_to_manifest">Add to AndroidManifest</string>
+    <string name="edit_with">Edit with...</string>
+    
+    <!-- logcat reader -->
+    <string name="search_log">Search log</string>
+    <string name="logcat_text">Logcat hasnt captured anything yet</string>
+    <string name="logcat_subtext">Keep this screen open then run your app</string>
+    <string name="logcat_filter_by_pkg">Filter by package name</string>
+    <string name="logcat_auto_scroll">Auto scroll enabled</string>
+    <string name="logcat_clear_logs">Clear all logs</string>
+    
     <!--  files manager screen  -->
     <string name="assets_manager_title">Assets Manager</string>
     <string name="assets_manager_options">Create or import</string>
@@ -2173,7 +2239,7 @@ Please try again later"</string>
 
 
     <!--  about the team screen  -->
-    <string name="about_title">About TrindadeWare</string>
+    <string name="about_title">About Sketchware Pro</string>
     <string name="about_team_title">The team</string>
     <string name="about_specialthanks_title">Special Thanks</string>
     <string name="about_changelog_title">Changelog</string>
@@ -2184,91 +2250,23 @@ Please try again later"</string>
 
 
     <!--  links  -->
-    <string name="link_github_release">https://github.com/aquilesTrindade/TrindadeWare/releases</string>
+    <string name="link_github_release">https://github.com/Sketchware-Pro/Sketchware-Pro/releases</string>
     <string name="link_docs_url">https://sketchware-pro.vercel.app/docs</string>
-    <string name="link_ideas_url">https://discord.com/invite/EWP6ygzz</string>
-    <string name="link_discord_invite">https://discord.com/invite/EWP6ygzz</string>
-    <string name="link_telegram_invite">https://t.me/trindadeware</string>
-    <string name="link_about_team">https://raw.githubusercontent.com/aquilesTrindade/TrindadeAPI/main/database/trindadeware.json</string>
-    <string name="link_github_url">https://github.com/aquilesTrindade/TrindadeWare</string>
-    
-    <!-- APIs -->
-    <string name="api_mobsoft_console">a274f257-a4e8-44cf-a20d-825df76ac782</string>
+    <string name="link_ideas_url">https://discord.gg/4uxhMwCt</string>
+    <string name="link_discord_invite">https://discord.gg/kq39yhT4rX</string>
+    <string name="link_telegram_invite">https://t.me/sketchwarepro</string>
+    <string name="link_about_team">https://sketchware-pro.github.io/Sketchware-Pro/aboutus.json</string>
+    <string name="link_github_url">https://github.com/Sketchware-Pro/Sketchware-Pro</string>
+    <string name="change_launcher_activity_dialog_title">Launcher Activity</string>
+    <string name="common_word_add_activtiy">Add Activity</string>
+    <string name="delete_custom_activity_dialog_message">All features related to %1$s will be removed. Are you sure?</string>
+    <string name="delete_custom_activity_dialog_title">Delete Activity</string>
+    <string name="delete_project_dialog_title">Delete Project</string>
+    <string name="delete_project_dialog_message">Are you sure you want to delete this project named %1$s?</string>
+    <string name="src_code_editor_unsaved_changes_dialog_warning_message">You have unsaved changes. Are you sure you want to exit?</string>
+    <string name="change_firebase_config_title">Change Firebase Config</string>
+    <string name="review_firebase_config_title">Review</string>
+    <string name="edit_view_properties_title">Edit Properties</string>
 
-    <!-- file picker -->
-    <string name="files">Files</string>
-    <string name="error">Error</string>
-    <string name="loading">Loading</string>
 
-    <plurals name="file_list_selected_count_format">
-        <item quantity="one">%1$,d selected</item>
-        <item quantity="other">%1$,d selected</item>
-    </plurals>
-    <string name="file_list_subtitle_separator">, </string>
-    <string name="empty">Empty</string>
-    <plurals name="file_list_subtitle_directory_count_format">
-        <item quantity="one">%1$,d folder</item>
-        <item quantity="other">%1$,d folders</item>
-    </plurals>
-    <plurals name="file_list_subtitle_file_count_format">
-        <item quantity="one">%1$,d file</item>
-        <item quantity="other">%1$,d files</item>
-    </plurals>
-    <string name="done">Done</string>
-    
-        <string name="max_selection">Max selection</string>
-    <string name="_8">8</string>
-    <string name="root_path">Root path</string>
-    <string name="storage_emulated_0">/storage/emulated/0/</string>
-    <string name="local_only">Local only</string>
-    <string name="pick_photos">Pick photos</string>
-    <string name="clear_list">Clear list</string>
-    <string name="select_theme">Select theme</string>
-    <string name="pink_theme">Pink theme</string>
-    <string name="green_theme_light_mode">Green theme light mode</string>
-    <string name="green_theme_dark_mode">Green theme dark mode</string>
-    <string name="blue_theme_light_mode">Blue theme light mode</string>
-    <string name="blue_theme_dark_mode">Blue theme dark mode</string>
-    <string name="red_theme_light_mode">Red theme light mode</string>
-    <string name="red_theme_dark_mode">Red theme dark mode</string>
-    <string name="dynamic_colors">Dynamic Colors</string>
-    <string name="theme">Theme</string>
-    <string name="rounded">Rounded</string>
-    <string name="cut">Cut</string>
-    <string name="corner_family">Corner family</string>
-    <string name="by_juan_nascimento">by Juan Nascimento (Ruan325Br)</string>
-    <string name="theme_default">Theme default</string>
-    <string name="corner_size">Corner size</string>
-    <string name="_30">30</string>
-    
-    <!-- Strings manager (Strings Creator App) -->
-    <string name="main_toolbar_title">Strings</string>
-    <string name="string_name">   String name</string>
-    <string name="string_val">   String value</string>
-    <string name="add">Add</string>
-    <string name="create">Create</string>
-    <string name="save">Save</string>
-    <string name="delete">Delete</string>
-    <string name="cancel">Cancel</string>
-    <string name="main_fab_text">New string</string>
-    <string name="view_code">View Code</string>
-    <string name="copy">Copy</string>
-    <string name="sucess">Sucess!</string>
-    <string name="more">More</string>
-    <string name="copied">Copied</string>
-    <string name="save_to_file">Save to file</string>
-    <string name="perm_alert">Please accept permission firts!</string>
-    <string name="delete_dialog_message">This option is not reversible</string>
-    <string name="bottom_sheet_title">Select Action</string>
-    <string name="edit">Edit</string>
-    
-    
-       <string name="cancel_button_label">Cancel</string>
-   <string name="choose_button_label">Select</string>
-   <string name="default_dir" translatable="false">/sdcard</string>
-   <string name="label_parent_directory">Parent Directory</string>
-   <string name="last_edit">Last edited: </string>
-   <string name="error_dir_access">Directory cannot be accessed</string>
-   <string name="label_parent_dir" translatable="false">...</string>
-    
 </resources>

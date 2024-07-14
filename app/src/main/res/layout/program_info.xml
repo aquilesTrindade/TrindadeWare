@@ -1,33 +1,12 @@
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?attr/colorBackground"
-    android:fitsSystemWindows="true">
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBarLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fitsSystemWindows="true">
-
-        <com.google.android.material.appbar.CollapsingToolbarLayout
-            android:id="@+id/collapsingToolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/collapsingToolbarLayoutLargeSize"
-            android:fitsSystemWindows="true"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed">
-
-            <com.google.android.material.appbar.MaterialToolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                app:layout_collapseMode="pin"
-                app:navigationIcon="@drawable/ic_back"
-                app:title="Program info" />
-        </com.google.android.material.appbar.CollapsingToolbarLayout>
-    </com.google.android.material.appbar.AppBarLayout>
+    <include layout="@layout/toolbar" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -50,7 +29,7 @@
                     android:layout_height="128dp"
                     android:layout_marginTop="16dp"
                     android:contentDescription="@null"
-                    android:src="@mipmap/ic_launcher" />
+                    android:src="@drawable/sketch_app_icon" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -80,7 +59,7 @@
                     android:layout_marginBottom="8dp"
                     android:alpha="0.87"
                     android:gravity="center"
-                    android:text="Copyright ⓒ TrindadeWare. All Rights Reserved."
+                    android:text="Copyright ⓒ Sketchware. All Rights Reserved."
                     android:textSize="13sp" />
 
                 <View
@@ -129,4 +108,4 @@
                 android:orientation="vertical" />
         </LinearLayout>
     </ScrollView>
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</LinearLayout>

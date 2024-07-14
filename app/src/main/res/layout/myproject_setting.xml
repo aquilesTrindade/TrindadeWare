@@ -1,42 +1,29 @@
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contents"
     android:layout_width="match_parent"
-    android:id="@id/contents"
-    android:background="?attr/colorBackground"
-    android:layout_height="match_parent">
-    
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
-        android:fitsSystemWindows="true"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="?android:colorBackground"
+    android:orientation="vertical"
+    android:paddingBottom="10dp">
 
-     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBarLayout"
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fitsSystemWindows="true">
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$Behavior">
 
-        <com.google.android.material.appbar.CollapsingToolbarLayout
-            android:id="@+id/collapsingToolbar"
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/collapsingToolbarLayoutLargeSize"
-            android:fitsSystemWindows="true"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            android:layout_height="?attr/actionBarSize" />
 
-            <com.google.android.material.appbar.MaterialToolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                app:layout_collapseMode="pin"
-                app:navigationIcon="@drawable/ic_back"
-                app:title="toolbar" />
-        </com.google.android.material.appbar.CollapsingToolbarLayout>
-     </com.google.android.material.appbar.AppBarLayout>
-        <androidx.core.widget.NestedScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -53,13 +40,13 @@
                 android:orientation="vertical">
 
                 <RelativeLayout
-                    android:id="@id/app_icon_layout"
+                    android:id="@+id/app_icon_layout"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:background="@drawable/circle_bg_grey">
 
                     <com.google.android.material.imageview.ShapeableImageView
-                        android:id="@id/app_icon"
+                        android:id="@+id/app_icon"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_centerInParent="true"
@@ -70,7 +57,7 @@
                 </RelativeLayout>
 
                 <TextView
-                    android:id="@id/tv_change_icon"
+                    android:id="@+id/tv_change_icon"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
@@ -79,7 +66,7 @@
             </LinearLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@id/ti_app_name"
+                android:id="@+id/ti_app_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
@@ -87,7 +74,7 @@
                 app:startIconDrawable="@drawable/ic_android_24">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@id/et_app_name"
+                    android:id="@+id/et_app_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:imeOptions="actionNext"
@@ -96,14 +83,14 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@id/ti_package_name"
+                android:id="@+id/ti_package_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 app:startIconDrawable="@drawable/ic_package_24">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@id/et_package_name"
+                    android:id="@+id/et_package_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="start|center"
@@ -113,14 +100,14 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@id/ti_project_name"
+                android:id="@+id/ti_project_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 app:startIconDrawable="@drawable/ic_interests_24">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@id/et_project_name"
+                    android:id="@+id/et_project_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:imeOptions="actionDone"
@@ -161,7 +148,7 @@
                             android:scrollbars="none">
 
                             <LinearLayout
-                                android:id="@id/layout_theme_colors"
+                                android:id="@+id/layout_theme_colors"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal" />
@@ -177,7 +164,7 @@
                             android:background="#ffc6c6c6" />
 
                         <ImageView
-                            android:id="@id/img_theme_color_help"
+                            android:id="@+id/img_theme_color_help"
                             android:layout_width="36dp"
                             android:layout_height="36dp"
                             android:paddingVertical="6dp"
@@ -186,7 +173,7 @@
                     </LinearLayout>
 
                     <ImageView
-                        android:id="@id/img_color_guide"
+                        android:id="@+id/img_color_guide"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="#ff000000"
@@ -222,7 +209,7 @@
                         android:paddingVertical="12dp">
 
                         <TextView
-                            android:id="@id/ver_code"
+                            android:id="@+id/ver_code"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginHorizontal="10dp"
@@ -264,7 +251,7 @@
                         android:paddingVertical="12dp">
 
                         <TextView
-                            android:id="@id/ver_name"
+                            android:id="@+id/ver_name"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginHorizontal="10dp"
@@ -287,7 +274,8 @@
                     </LinearLayout>
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
-        
+        </LinearLayout>
+    </ScrollView>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -315,7 +303,4 @@
             android:text="@string/myprojects_list_menu_title_create_a_new_project"
             android:textSize="@dimen/text_size_button_material" />
     </LinearLayout>
-  </LinearLayout>
- </androidx.core.widget.NestedScrollView>
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

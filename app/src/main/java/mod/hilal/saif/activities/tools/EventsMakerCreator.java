@@ -15,9 +15,8 @@ import mod.SketchwareUtil;
 import mod.agus.jcoderz.lib.FileUtil;
 import mod.hey.studios.util.Helper;
 import mod.jbk.util.OldResourceIdMapper;
-import mod.trindade.dev.theme.ThemedActivity; 
 
-public class EventsMakerCreator extends ThemedActivity {
+public class EventsMakerCreator extends Activity {
 
     private String _code;
     private String _desc;

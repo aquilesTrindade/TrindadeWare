@@ -1,42 +1,17 @@
-<LinearLayout 
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="?attr/colorBackground"
-    android:fitsSystemWindows="true">
+    tools:ignore="ContentDescription">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBarLayout"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fitsSystemWindows="true">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <com.google.android.material.appbar.CollapsingToolbarLayout
-            android:id="@+id/collapsingToolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/collapsingToolbarLayoutLargeSize"
-            android:fitsSystemWindows="true"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed">
-
-            <com.google.android.material.appbar.MaterialToolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                app:layout_collapseMode="pin"
-                app:navigationIcon="@drawable/abc_ic_ab_back_material"
-                app:title="About modders" />
-        </com.google.android.material.appbar.CollapsingToolbarLayout>
-    </com.google.android.material.appbar.AppBarLayout>
-
-      <LinearLayout
-           android:orientation="vertical"
-           android:layout_width="match_parent"
-           app:layout_behavior="@string/appbar_scrolling_view_behavior"
-           android:layout_height="match_parent">
-
+        <include layout="@layout/toolbar" />
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tab_layout"
@@ -69,7 +44,6 @@
                 android:id="@+id/root"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                
                 android:orientation="horizontal" />
 
             <LinearLayout
@@ -94,10 +68,8 @@
                     android:id="@+id/team"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:layout_behavior="@string/appbar_scrolling_view_behavior"
                     android:clipToPadding="false"
                     android:paddingBottom="70dp"
-                    android:layout_margin="12dp"
                     tools:listitem="@layout/about_teamview" />
             </LinearLayout>
 
@@ -111,10 +83,45 @@
                     android:id="@+id/changelog"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:layout_behavior="@string/appbar_scrolling_view_behavior"
                     android:clipToPadding="false"
                     android:paddingBottom="70dp" />
             </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/loading_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="8dp"
+        tools:visibility="gone">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/girl_swimming_flat" />
+
+        <TextView
+            android:id="@+id/tv_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/about_loading_title"
+            android:textAppearance="?attr/textAppearanceBodyLarge" />
+
+        <TextView
+            android:id="@+id/tv_loading_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="8dp"
+            android:paddingTop="4dp"
+            android:paddingRight="8dp"
+            android:text="@string/about_loading_subtitle"
+            android:textAppearance="?attr/textAppearanceBodySmall" />
+    </LinearLayout>
+
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
@@ -128,6 +135,4 @@
         app:backgroundTint="#5865F2"
         app:icon="@drawable/ic_discord"
         app:iconTint="#FFF" />
-        </LinearLayout>
-    </LinearLayout>
-  </LinearLayout>
+</RelativeLayout>

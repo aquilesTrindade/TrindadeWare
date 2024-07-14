@@ -1,81 +1,61 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="?attr/colorBackground"
-    android:layout_height="match_parent">
-    
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
-        android:fitsSystemWindows="true"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBarLayout"
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fitsSystemWindows="true">
+        android:layout_height="?attr/actionBarSize"
+        android:contentInsetStart="0dp"
+        app:contentInsetStart="0dp"
+        tools:title="AppCompat and Design" />
 
-        <com.google.android.material.appbar.CollapsingToolbarLayout
-            android:id="@+id/collapsingToolbar"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
-            android:layout_height="?attr/collapsingToolbarLayoutLargeSize"
-            android:fitsSystemWindows="true"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            style="?attr/materialCardViewFilledStyle"
+            app:cardBackgroundColor="?attr/colorSurfaceContainerHigh">
 
-            <com.google.android.material.appbar.MaterialToolbar
-                android:id="@+id/toolbar"
+            <LinearLayout
+                android:id="@+id/layout_switch"
                 android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                app:layout_collapseMode="pin"
-                app:navigationIcon="@drawable/ic_back"
-                app:title="toolbar" />
-        </com.google.android.material.appbar.CollapsingToolbarLayout>
-     </com.google.android.material.appbar.AppBarLayout>
-        <androidx.core.widget.NestedScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior">
-            
-      <LinearLayout 
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:padding="12dp"
-            
-            android:orientation="vertical" >   
-            
-        <LinearLayout
-            android:id="@+id/layout_switch"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:background="?selectableItemBackground"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp">
-
-            <TextView
-                android:id="@+id/tv_enable"
-                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ellipsize="end"
-                android:singleLine="true"
-                android:textColor="?colorError"
-                android:textSize="14sp"
-                tools:text="@string/design_library_settings_title_enabled" />
+                android:background="?selectableItemBackground"
+                android:paddingHorizontal="14dp"
+                android:paddingVertical="6dp"
+                android:gravity="center"
+                android:orientation="horizontal">
 
-            <com.google.android.material.materialswitch.MaterialSwitch
-                android:id="@+id/lib_switch"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:layout_marginLeft="8dp"
-                android:clickable="false" />
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/tv_enable"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="?colorControlNormal"
+                    android:textSize="18sp"
+                    tools:text="@string/design_library_settings_title_enabled" />
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/lib_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="8dp"
+                    android:clickable="false" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -96,7 +76,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="left"
-               
+                android:textColor="#ff757575"
                 android:textSize="14sp"
                 tools:text="@string/design_library_appcompat_description" />
         </LinearLayout>
@@ -109,9 +89,7 @@
             android:gravity="left"
             android:padding="8dp"
             android:textColor="?colorError"
-            android:textSize="12sp"
+            android:textSize="14sp"
             tools:text="@string/design_library_message_slow_down_compilation_time" />
-       </LinearLayout>
-      </androidx.core.widget.NestedScrollView>
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</LinearLayout>
